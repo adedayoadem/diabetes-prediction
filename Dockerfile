@@ -16,7 +16,7 @@ COPY --from=build /app /app
 RUN pip install streamlit
 
 # Install streamlit in the final image
-RUN pip install scikit-learn
+RUN pip install scikit-learn == 1.3.2
 
 # Add the installation path to the $PATH
 ENV PATH="/app:${PATH}"
